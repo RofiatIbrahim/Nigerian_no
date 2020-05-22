@@ -1,0 +1,24 @@
+def is_Nigerian(phone_number):
+ #helps the user to verify if the number inputted is a Nigerian number
+#parameters: phone_number : The phone number the user wnts to verify
+#returns: True or False after checking the first 3 or 6 numbers and making sure the number doesnt extend out of the limit of number of digits
+
+ try:
+  num_str = str(phone_number)
+  if num_str[:2] == "80" or num_str[:2] == "81" or num_str[:2] == "90" or num_str[:2] == "70":
+     if len(num_str) == 10 :
+        return True 
+     else :
+        return False
+  elif num_str[:5] == "23480" or num_str[:5] == "23481" or num_str[:5] == "23490" or num_str[:5] == "23470":
+     if len(num_str) == 13:
+        return True
+     else :
+        return False   
+  else:
+     return False
+ except ValueError:
+     print("Invalid Value")
+     return False
+phone_number = int(input("Enter the phone number here(Figures only)")):   
+print(is_Nigerian(phone_number))
