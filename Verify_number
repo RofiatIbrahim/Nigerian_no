@@ -1,8 +1,9 @@
 def is_Nigerian(phone_number):
- #helps the user to verify if the number inputted is a Nigerian number
-#parameters: phone_number : The phone number the user wnts to verify
-#returns: True or False after checking the first 3 or 6 numbers and making sure the number doesnt extend out of the limit of number of digits
-
+ """
+ helps the user to verify if the number inputted is a Nigerian number
+ parameters: phone_number : The phone number the user wnts to verify
+ returns: True or False after checking the first 3 or 6 numbers and making sure the number doesnt extend out of the limit of number of digits
+ """
  try:
   num_str = str(phone_number)
   if num_str[:2] == "80" or num_str[:2] == "81" or num_str[:2] == "90" or num_str[:2] == "70":
